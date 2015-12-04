@@ -9,6 +9,7 @@
 
     <title>My Books</title>
 
+    <link href="styles/reset.css" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
     
   </head>
@@ -17,18 +18,25 @@
       <div class="top-bar-container">
         <div class="top-bar"
           <header>
-            <h4>My Books</h4>
+            <button class="menu-btn"><img src="assets/icons/ic_menu_24px.svg"></button>
+            <h4 class="top-bar-h4">My Books</h4>
           </header>
         </div>
       </div>
 
-      <!-- <ul class="menu-list"></ul> -->
+      <div class="book-menu">
+        <ul class="menu-list">
+          <li>El Pooch</li>
+          <li>The Flight</li>
+          <li>Top 10 Australian Beaches</li>
+        </ul>
+      </div>
 
       
       
       <section class="card book-card">
         <section class="card-content">
-          <img class="card-image" src="top-beaches.jpg" alt="beaches">
+          <img class="card-image" src="assets/top-beaches.jpg" alt="beaches">
           <header class="card-header book-title">Remember Me</header>
           <span class="author">Troy McClure</span>
           <div class="card-buttons">
