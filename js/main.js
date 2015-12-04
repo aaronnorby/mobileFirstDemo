@@ -1,5 +1,3 @@
-// break these inner things out for reuse
-
 (function() {
 
 
@@ -95,7 +93,28 @@
   });
   
 
+  
 })();
+
+var form = document.getElementById('add-book');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  var titleInput = document.getElementById('book-title');
+  var authorInput = document.getElementById('author-name');
+
+  title = titleInput.value;
+  author = authorInput.value;
+
+  // reset the form 
+  titleInput.value = '';
+  authorInput.value = '';
+
+  console.log(title, author);
+
+  
+
+});
 
 
 // add click handler to overlay so that the menu hides on clickaway 
