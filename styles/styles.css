@@ -1,7 +1,9 @@
 /* mobile styles first */
+.card {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+}
 
-
-.welcome-btn {
+.card-btn {
   background: none;
   border: none;
 }
