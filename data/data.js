@@ -1,4 +1,4 @@
-var bookData = {
+window.bookData = {
   books: [
     {
       title: 'El Pooch',
