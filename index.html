@@ -18,7 +18,10 @@
       <div class="top-bar-container">
         <div class="top-bar"
           <header>
-            <button class="menu-btn"><img src="assets/icons/ic_menu_24px.svg"></button>
+            <button class="menu-btn">
+              <img class="menu-icon" src="assets/icons/ic_menu_24px.svg">
+              <img class="close-icon" src="assets/icons/ic_close_24px.svg">
+            </button>
             <h4 class="top-bar-h4">My Books</h4>
           </header>
         </div>
@@ -33,17 +36,19 @@
       </div>
 
       
-      
-      <section class="card book-card">
-        <section class="card-content">
-          <img class="card-image" src="assets/top-beaches.jpg" alt="beaches">
-          <header class="card-header book-title">Remember Me</header>
-          <span class="author">Troy McClure</span>
-          <div class="card-buttons">
-            <button class="card-btn sample-btn">Free Sample</button><button class="card-btn review-btn">Review</button>
-          </div>
+      <div id="card-container"> 
+        <div class="overlay"></div>
+        <section class="card book-card">
+          <section class="card-content">
+            <img class="card-image" src="assets/top-beaches.jpg" alt="beaches">
+            <header class="card-header book-title">Remember Me</header>
+            <span class="author">Troy McClure</span>
+            <div class="card-buttons">
+              <button class="card-btn sample-btn">Free Sample</button><button class="card-btn review-btn">Review</button>
+            </div>
+          </section>
         </section>
-      </section>
+      </div>
            
     </div>
 

@@ -3,6 +3,10 @@
 (function() {
 
   function generateCard(book) {
+    // this function successively creates all of the components of a card, appends
+    // each to its appropriate parent, and finally appends the completed card to
+    // the DOM 
+
     var card = document.createElement('section');
     card.classList.add('card');
     card.classList.add('book-card');
@@ -42,7 +46,7 @@
 
     card.appendChild(cardContent);
 
-    var container = document.getElementById('container');
+    var container = document.getElementById('card-container');
     container.appendChild(card);
 
   }
@@ -55,11 +59,23 @@
 
   // add click handler to menu button when shown
   var menuBtn = document.getElementsByClassName('menu-btn')[0];
+
+  // break callback out 
   menuBtn.addEventListener('click', function(e) {
+    // swap icon image
+    e.target.parentNode.classList.toggle('menu-revealed');
+
     // add and remove 'menu-revealed' class to other elements
     var menuList = document.getElementsByClassName('menu-list')[0];
     menuList.classList.toggle('menu-revealed');
+
+    // toggle overlay
+    var overlay = document.getElementsByClassName('overlay')[0];
+    overlay.classList.toggle('menu-revealed');
   });
   
 
 })();
+
+
+// add click handler to overlay so that the menu hides on clickaway 
