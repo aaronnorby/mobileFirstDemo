@@ -26,7 +26,8 @@
     // add new book to bookData 
     window.bookData.books.push({title: title, author: author});
 
-    // generate a new card and add it to the page
+    // generate a new card and add it to the page. Relies on generateBookCard from
+    // main.js
     window.generateBookCard({author: author, title: title});
 
   }
