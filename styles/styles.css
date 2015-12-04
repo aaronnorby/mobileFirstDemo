@@ -41,6 +41,11 @@
   overflow: hidden;
 }
 
+.menu-list.menu-revealed {
+  height: 25%;
+  overflow: scroll;
+}
+
 .menu-list > li {
   height: 40px;
   box-sizing: border-box;

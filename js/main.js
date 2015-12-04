@@ -1,49 +1,65 @@
 // break these inner things out for reuse
 
-function generateCard(book) {
-  var card = document.createElement('section');
-  card.classList.add('card');
-  card.classList.add('book-card');
+(function() {
 
-  var cardContent = document.createElement('section');
-  cardContent.classList.add('card-content');
+  function generateCard(book) {
+    var card = document.createElement('section');
+    card.classList.add('card');
+    card.classList.add('book-card');
 
-  //var img = document.createElement('img');
+    var cardContent = document.createElement('section');
+    cardContent.classList.add('card-content');
 
-  var title = document.createElement('header');
-  title.classList.add('card-header');
-  title.classList.add('book-title');
-  title.textContent = book.title;
+    //var img = document.createElement('img');
 
-  cardContent.appendChild(title);
+    var title = document.createElement('header');
+    title.classList.add('card-header');
+    title.classList.add('book-title');
+    title.textContent = book.title;
 
-  var author = document.createElement('span');
-  author.classList.add('author');
-  author.textContent = book.author;
+    cardContent.appendChild(title);
 
-  cardContent.appendChild(author);
+    var author = document.createElement('span');
+    author.classList.add('author');
+    author.textContent = book.author;
 
-  var cardButtons = document.createElement('div');
-  cardButtons.classList.add('card-buttons');
+    cardContent.appendChild(author);
 
-  var sampleButton = document.createElement('button');
-  sampleButton.classList.add('card-btn', 'sample-btn');
-  sampleButton.textContent = 'Free Sample';
-  cardButtons.appendChild(sampleButton);
+    var cardButtons = document.createElement('div');
+    cardButtons.classList.add('card-buttons');
 
-  var reviewButton = document.createElement('button');
-  reviewButton.classList.add('card-btn', 'review-btn');
-  reviewButton.textContent = 'Review';
-  cardButtons.appendChild(reviewButton);
+    var sampleButton = document.createElement('button');
+    sampleButton.classList.add('card-btn', 'sample-btn');
+    sampleButton.textContent = 'Free Sample';
+    cardButtons.appendChild(sampleButton);
 
-  cardContent.appendChild(cardButtons);
+    var reviewButton = document.createElement('button');
+    reviewButton.classList.add('card-btn', 'review-btn');
+    reviewButton.textContent = 'Review';
+    cardButtons.appendChild(reviewButton);
 
-  card.appendChild(cardContent);
+    cardContent.appendChild(cardButtons);
 
-  var container = document.getElementById('container');
-  container.appendChild(card);
+    card.appendChild(cardContent);
 
-}
+    var container = document.getElementById('container');
+    container.appendChild(card);
 
-generateCard({author: 'Dickens', title: 'what'});
+  }
 
+  generateCard({author: 'Dickens', title: 'what'});
+
+  for (var i = 0; i < window.bookData.books.length; i++) {
+    generateCard(window.bookData.books[i]);
+  }
+
+  // add click handler to menu button when shown
+  var menuBtn = document.getElementsByClassName('menu-btn')[0];
+  menuBtn.addEventListener('click', function(e) {
+    // add and remove 'menu-revealed' class to other elements
+    var menuList = document.getElementsByClassName('menu-list')[0];
+    menuList.classList.toggle('menu-revealed');
+  });
+  
+
+})();
