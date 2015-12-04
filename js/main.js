@@ -13,7 +13,7 @@
       for (var j = 0; j < classes.length; j++) {
         button.classList.add(classes[j]);
       }
-      button.textContent = buttonTextAndClasses.text;
+      button.textContent = buttonTextAndClasses[i].text;
 
       cardButtons.appendChild(button);
     }
@@ -21,7 +21,9 @@
     return cardButtons;
   }
 
-  function generateBookCard(book) {
+  // function to create a new book card and append it to the dom. We're attaching
+  // it to the window because the form handler needs access to it
+  window.generateBookCard = function generateBookCard(book) {
     // this function successively creates all of the components of a card, appends
     // each to its appropriate parent, and finally appends the completed card to
     // the DOM 
@@ -68,12 +70,6 @@
 
   }
 
-  generateBookCard({author: 'Dickens', title: 'what'});
-
-  for (var i = 0; i < window.bookData.books.length; i++) {
-    generateBookCard(window.bookData.books[i]);
-  }
-
   // add click handler to menu button when shown
   var menuBtn = document.getElementsByClassName('menu-btn')[0];
 
@@ -91,40 +87,12 @@
     overlay.classList.toggle('menu-revealed');
   });
 
-  // enable adding a book to the list via input form 
-  function addBook(e) {
-    e.preventDefault();
-
-    var titleInput = document.getElementById('book-title');
-    var authorInput = document.getElementById('author-name');
-
-    title = titleInput.value;
-    author = authorInput.value;
-
-    // reset the form 
-    titleInput.value = '';
-    authorInput.value = '';
-
-    // check to see if the book is already in the system
-    for (var i = 0; i < window.bookData.books.length; i++) {
-      if (window.bookData.books[i].title === title || window.bookData.books[i].author === author) {
-        alert('It appears you\'ve read this book before. No need to enter it again');
-        return;
-      }
-    }
-
-    // add new book to bookData 
-    window.bookData.books.push({title: title, author: author});
-
-    // generate a new card and add it to the page
-    generateBookCard({author: author, title: title});
-
-  }
   
-  var form = document.getElementById('add-book');
 
-  form.addEventListener('submit', addBook);
-
+  // add all of the books in the database to DOM
+  for (var i = 0; i < window.bookData.books.length; i++) {
+    generateBookCard(window.bookData.books[i]);
+  }
   
 })();
 
