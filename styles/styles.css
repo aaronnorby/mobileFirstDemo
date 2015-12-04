@@ -1,11 +1,21 @@
 /* mobile styles first */
 .card {
+  margin: 1%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+}
+
+.card-content {
+  height: 100px;
 }
 
 .card-btn {
   background: none;
   border: none;
+}
+
+.card-image {
+  height: 100px;
+  float: left;
 }
 
 
