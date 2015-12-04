@@ -1,0 +1,3 @@
+function generateWelcomeTemplate() {
+  return true;
+}
