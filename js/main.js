@@ -1,6 +1,5 @@
 (function() {
 
-
   // generate buttons. Argument should look like this: 
   // [{text: 'clickme', classes: ['firstclass', secondclass']}]
   function generateCardButtons(buttonTextAndClasses) {
@@ -91,30 +90,44 @@
     var overlay = document.getElementsByClassName('overlay')[0];
     overlay.classList.toggle('menu-revealed');
   });
+
+  // enable adding a book to the list via input form 
+  function addBook(e) {
+    e.preventDefault();
+
+    var titleInput = document.getElementById('book-title');
+    var authorInput = document.getElementById('author-name');
+
+    title = titleInput.value;
+    author = authorInput.value;
+
+    // reset the form 
+    titleInput.value = '';
+    authorInput.value = '';
+
+    // check to see if the book is already in the system
+    for (var i = 0; i < window.bookData.books.length; i++) {
+      if (window.bookData.books[i].title === title || window.bookData.books[i].author === author) {
+        alert('It appears you\'ve read this book before. No need to enter it again');
+        return;
+      }
+    }
+
+    // add new book to bookData 
+    window.bookData.books.push({title: title, author: author});
+
+    // generate a new card and add it to the page
+    generateBookCard({author: author, title: title});
+
+  }
   
+  var form = document.getElementById('add-book');
+
+  form.addEventListener('submit', addBook);
 
   
 })();
 
-var form = document.getElementById('add-book');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  var titleInput = document.getElementById('book-title');
-  var authorInput = document.getElementById('author-name');
-
-  title = titleInput.value;
-  author = authorInput.value;
-
-  // reset the form 
-  titleInput.value = '';
-  authorInput.value = '';
-
-  console.log(title, author);
-
-  
-
-});
 
 
 // add click handler to overlay so that the menu hides on clickaway 
