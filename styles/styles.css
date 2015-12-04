@@ -1,5 +1,9 @@
 
 /* mobile styles first */
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
 .top-bar-container {
   height: 40px;
   width: 100%;
