@@ -1,4 +1,6 @@
 (function() {
+  // functions to generate book-cards, handle the menu button, and add cards to the
+  // dom from preexisting data
 
   // generate buttons. Argument should look like this: 
   // [{text: 'clickme', classes: ['firstclass', secondclass']}]
