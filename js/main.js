@@ -2,7 +2,29 @@
 
 (function() {
 
-  function generateCard(book) {
+
+  // generate buttons. Argument should look like this: 
+  // [{text: 'clickme', classes: ['firstclass', secondclass']}]
+  function generateCardButtons(buttonTextAndClasses) {
+    
+    var cardButtons = document.createElement('div');
+    cardButtons.classList.add('card-buttons');
+
+    for (var i = 0; i < buttonTextAndClasses.length; i++) {
+      var button = document.createElement('button');
+      var classes = buttonTextAndClasses[i].classes;
+      for (var j = 0; j < classes.length; j++) {
+        button.classList.add(classes[j]);
+      }
+      button.textContent = buttonTextAndClasses.text;
+
+      cardButtons.appendChild(button);
+    }
+
+    return cardButtons;
+  }
+
+  function generateBookCard(book) {
     // this function successively creates all of the components of a card, appends
     // each to its appropriate parent, and finally appends the completed card to
     // the DOM 
@@ -13,8 +35,6 @@
 
     var cardContent = document.createElement('section');
     cardContent.classList.add('card-content');
-
-    //var img = document.createElement('img');
 
     var title = document.createElement('header');
     title.classList.add('card-header');
@@ -28,19 +48,19 @@
     author.textContent = book.author;
 
     cardContent.appendChild(author);
+    
+    var buttonSpecs = [
+      {
+        text: 'Free Sample',
+        classes: ['card-btn', 'sample-btn']
+      },
+      {
+        text: 'Review',
+        classes: ['card-btn', 'review-btn']
+      }
+    ];
 
-    var cardButtons = document.createElement('div');
-    cardButtons.classList.add('card-buttons');
-
-    var sampleButton = document.createElement('button');
-    sampleButton.classList.add('card-btn', 'sample-btn');
-    sampleButton.textContent = 'Free Sample';
-    cardButtons.appendChild(sampleButton);
-
-    var reviewButton = document.createElement('button');
-    reviewButton.classList.add('card-btn', 'review-btn');
-    reviewButton.textContent = 'Review';
-    cardButtons.appendChild(reviewButton);
+    var cardButtons = generateCardButtons(buttonSpecs);
 
     cardContent.appendChild(cardButtons);
 
@@ -51,10 +71,10 @@
 
   }
 
-  generateCard({author: 'Dickens', title: 'what'});
+  generateBookCard({author: 'Dickens', title: 'what'});
 
   for (var i = 0; i < window.bookData.books.length; i++) {
-    generateCard(window.bookData.books[i]);
+    generateBookCard(window.bookData.books[i]);
   }
 
   // add click handler to menu button when shown
