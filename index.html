@@ -56,14 +56,14 @@
             <fieldset>
               <legend>Book information</legend>
               <p>
-                <input type="text" name="title-input" id="book-title" placeholder="title"></input>
+                <input type="text" name="title-input" id="book-title" placeholder="title" required></input>
                 <label for="book-title">Book Title</label>
               </p>
               <p>
-                <input type="text" name="author-input" id="author-name" placeholder="author"></input>
+                <input type="text" name="author-input" id="author-name" placeholder="author" required></input>
                 <label for="author-name">Author Name</label>
               </p>
-              <button type="submit" class="card-btn">Add</button><button class="card-btn">Cancel</button>
+              <button type="submit" class="card-btn">Add</button><button class="card-btn cancel-btn">Cancel</button>
             </fieldset>
           </form>
         </div>
@@ -86,6 +86,7 @@
     <script src='data/data.js'></script>
     <script src='js/main.js'></script>
     <script src='js/welcome-handler.js'></script>
+    <script src='js/form-handler.js'></script>
   </body>
 </html>
 
