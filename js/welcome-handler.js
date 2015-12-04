@@ -1,5 +1,4 @@
 (function() {
-  
 
   function yesHandler(e) {
     // show the form
@@ -13,5 +12,13 @@
 
   var yesBtn = document.getElementsByClassName('yes-btn')[0];
   yesBtn.addEventListener('click', yesHandler);
+
+  function noHandler(e) {
+    var welcomeCard = document.getElementsByClassName('welcome-card')[0];
+    welcomeCard.style.display = 'none';
+  }
+
+  var noBtn = document.getElementsByClassName('no-btn')[0];
+  noBtn.addEventListener('click', noHandler);
 
 })();
