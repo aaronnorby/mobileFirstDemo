@@ -1,11 +1,27 @@
 /* mobile styles first */
+.top-bar-container {
+  height: 40px;
+  width: 100%;
+}
+
+.top-bar {
+  height: 40px;
+  width: 100%;
+  background-color: #e4004f;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+  color: #fff;
+}
+
 .card {
+  height: 75px;
   margin: 1%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
 }
 
 .card-content {
-  height: 100px;
 }
 
 .card-btn {
@@ -14,7 +30,7 @@
 }
 
 .card-image {
-  height: 100px;
+  height: 75px;
   float: left;
 }
 
