@@ -1,6 +1,11 @@
 /* mobile styles first */
 
 
+.welcome-btn {
+  background: none;
+  border: none;
+}
+
 
 /* styles for larger screens. Check on breakpoints */
 @media screen and (min-width: 480px) {
