@@ -27,7 +27,7 @@ p {
 .top-bar-h4 {
   display: inline-block;
   position: absolute;
-  padding-left: 5%;
+  padding-left: 15%;
   top: 30%;
   font-weight: 400;
 }
@@ -102,6 +102,7 @@ p {
   overflow: hidden;
   height: 125px;
   margin: 1%;
+  border-radius: 2px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
 }
 
@@ -137,6 +138,7 @@ p {
   width: 80%;
   left: 10%;
   height: 150px;
+  padding: 10px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
 }
 
