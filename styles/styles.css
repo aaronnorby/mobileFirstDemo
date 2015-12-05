@@ -20,6 +20,8 @@ p {
   position: absolute;
   top: 0px;
   left: 0px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
   color: #fff;
 }
@@ -58,6 +60,8 @@ p {
   background: #fff;
   width: 100%;
   z-index: 20; /* so it's not hidden by overlay */
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .15);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .15);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .15);
 }
 
@@ -116,7 +120,11 @@ p {
   overflow: hidden;
   height: 125px;
   margin: 1%;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4); 
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
 }
 
@@ -153,6 +161,8 @@ p {
   left: 10%;
   height: 150px;
   padding: 10px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
+  -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
 }
 
