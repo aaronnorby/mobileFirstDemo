@@ -30,6 +30,19 @@
     // main.js
     window.generateBookCard({author: author, title: title});
 
+    // hide the form again 
+    var formContainer = document.getElementsByClassName('input-container')[0];
+    formContainer.classList.remove('form-revealed');
+
+    // hide the overlay 
+    var overlay = document.getElementsByClassName('overlay')[0];
+    overlay.classList.remove('form-revealed');
+
+    // make sure menu button is enabled
+    var menuBtn = document.getElementsByClassName('menu-btn')[0];
+    menuBtn.disabled = false;
+
+
   }
   
   form.addEventListener('submit', addBook);
