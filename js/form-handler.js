@@ -17,7 +17,7 @@
 
     // check to see if the book is already in the system
     for (var i = 0; i < window.bookData.books.length; i++) {
-      if (window.bookData.books[i].title === title || window.bookData.books[i].author === author) {
+      if (window.bookData.books[i].title === title && window.bookData.books[i].author === author) {
         alert('It appears you\'ve read this book before. No need to enter it again');
         return;
       }
