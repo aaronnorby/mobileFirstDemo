@@ -80,6 +80,8 @@
 
     // add data-author attribute for reordering
     card.setAttribute('data-author', book.author);
+    //and data-title for reordering by title
+    card.setAttribute('data-title', book.title);
 
     var container = document.getElementById('card-container');
     container.appendChild(card);
