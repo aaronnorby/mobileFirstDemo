@@ -74,6 +74,7 @@ p {
   box-sizing: border-box;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 10px;
   border-bottom: 1px solid gray;
 }
 
@@ -237,6 +238,8 @@ p {
 
   .menu-list {
     height: 40px;
+    padding-top: 10px;
+    box-sizing: border-box;
   }
 
   .menu-list > li {
