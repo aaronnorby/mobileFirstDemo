@@ -43,6 +43,10 @@
     // hide the overlay 
     var overlay = document.getElementsByClassName('overlay')[0];
     overlay.classList.remove('form-revealed');
+
+    // make sure menu button is enabled
+    var menuBtn = document.getElementsByClassName('menu-btn')[0];
+    menuBtn.disabled = false;
   }
 
   var cancelBtn = document.getElementsByClassName('cancel-btn')[0];

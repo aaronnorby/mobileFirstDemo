@@ -8,6 +8,10 @@
     // show the overlay 
     var overlay = document.getElementsByClassName('overlay')[0];
     overlay.classList.add('form-revealed');
+
+    // disable menu button while form is open
+    var menuButton = document.getElementsByClassName('menu-btn')[0];
+    menuButton.disabled = true;
   }
 
   var yesBtn = document.getElementsByClassName('yes-btn')[0];
