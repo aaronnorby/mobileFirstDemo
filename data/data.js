@@ -7,7 +7,8 @@ window.bookData = {
     },
     {
       title: 'The Flight',
-      author: 'Scott Masterson'
+      author: 'Scott Masterson',
+      imagePath: 'assets/plane.png'
     }
   ]
 }

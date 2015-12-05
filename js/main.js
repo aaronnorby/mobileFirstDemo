@@ -35,6 +35,14 @@
     card.classList.add('card');
     card.classList.add('book-card');
 
+    // add an image. Default image is the dog
+    var img = document.createElement('img');
+    var imagePath = book.imagePath ? book.imagePath : 'assets/pooch.png';
+    img.setAttribute('src', imagePath);
+
+    // attach image to card
+    card.appendChild(img);
+
     var cardContent = document.createElement('section');
     cardContent.classList.add('card-content');
 
