@@ -22,9 +22,9 @@ body {
 
 .top-bar-h4 {
   display: inline-block;
-  height: 100%;
   position: absolute;
-  top: 25%;
+  padding-left: 5%;
+  top: 30%;
 }
 
 .menu-btn {
