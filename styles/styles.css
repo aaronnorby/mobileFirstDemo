@@ -115,7 +115,7 @@ p {
 }
 
 .welcome-card {
-  height: 125px;
+  height: 165px;
 }
 
 .welcome-card h3 {
@@ -147,7 +147,11 @@ p {
   padding-left: 3%;
   padding-top: 5%;
   box-sizing: border-box;
-  height: 85px;
+  height: 85px; /* height of card - height of card-buttons */
+}
+
+.welcome-card .card-content {
+  height: 125px;
 }
 
 .card-buttons {
