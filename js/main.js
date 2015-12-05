@@ -40,7 +40,7 @@
     var title = document.createElement('header');
     title.classList.add('card-header');
     title.classList.add('book-title');
-    title.textContent = book.title;
+    title.innerHTML = '<h3>' + book.title + '</h3>';
 
     cardContent.appendChild(title);
 
@@ -57,7 +57,7 @@
       },
       {
         text: 'Review',
-        classes: ['card-btn', 'review-btn']
+        classes: ['card-btn', 'review-btn', 'btn-default']
       }
     ];
 

@@ -95,6 +95,8 @@ p {
 }
 
 .card {
+  position: relative;
+  overflow: hidden;
   height: 100px;
   margin: 1%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, .4);
@@ -133,10 +135,23 @@ p {
   padding-top: 5%;
 }
 
+.card-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid gray;
+  padding: 10px;
+}
+
 .card-btn {
   background: none;
   border: none;
   text-transform: uppercase;
+}
+
+.btn-default {
+  color: #fd9c26;
 }
 
 .card-image {
