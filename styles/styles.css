@@ -84,6 +84,18 @@ p {
   border-bottom: 0;
 }
 
+.order-buttons {
+  font-weight: 100;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.order-buttons .card-btn {
+  font-size: .5rem;
+  padding-bottom: 0;
+}
+
 .overlay {
   display: none;
   border: none;

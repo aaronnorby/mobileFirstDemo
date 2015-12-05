@@ -1,3 +1,4 @@
+// add alt text
 (function() {
   // functions to generate book-cards, handle the menu button, and add cards to the
   // dom from preexisting data
