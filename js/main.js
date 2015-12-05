@@ -1,3 +1,4 @@
+// disable menu button when form is open
 (function() {
   // functions to generate book-cards, handle the menu button, and add cards to the
   // dom from preexisting data
@@ -46,7 +47,7 @@
 
     var author = document.createElement('span');
     author.classList.add('author');
-    author.textContent = book.author;
+    author.textContent = 'By ' + book.author;
 
     cardContent.appendChild(author);
     
@@ -63,9 +64,10 @@
 
     var cardButtons = generateCardButtons(buttonSpecs);
 
-    cardContent.appendChild(cardButtons);
+    //cardContent.appendChild(cardButtons);
 
     card.appendChild(cardContent);
+    card.appendChild(cardButtons);
 
     var container = document.getElementById('card-container');
     container.appendChild(card);
