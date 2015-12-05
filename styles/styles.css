@@ -24,10 +24,12 @@ p {
   color: #fff;
 }
 
-.top-bar-h4 {
+.top-bar header {
   display: inline-block;
+}
+
+.top-bar-h4 {
   position: absolute;
-  padding-left: 15%;
   top: 30%;
   font-weight: 400;
 }
