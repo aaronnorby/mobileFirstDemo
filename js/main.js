@@ -12,14 +12,18 @@
     cardButtons.classList.add('card-buttons');
 
     for (var i = 0; i < buttonTextAndClasses.length; i++) {
-      var button = document.createElement('button');
-      var classes = buttonTextAndClasses[i].classes;
-      for (var j = 0; j < classes.length; j++) {
-        button.classList.add(classes[j]);
-      }
-      button.textContent = buttonTextAndClasses[i].text;
+      try {
+        var button = document.createElement('button');
+        var classes = buttonTextAndClasses[i].classes;
+        for (var j = 0; j < classes.length; j++) {
+          button.classList.add(classes[j]);
+        }
+        button.textContent = buttonTextAndClasses[i].text;
 
-      cardButtons.appendChild(button);
+        cardButtons.appendChild(button);
+      } catch(err) {
+        console.log('Error encountered generating a button: ', err);
+      }
     }
 
     return cardButtons;
@@ -109,11 +113,11 @@
 
   // add all of the books in the database to DOM
   for (var i = 0; i < window.bookData.books.length; i++) {
-    generateBookCard(window.bookData.books[i]);
+    try {
+      generateBookCard(window.bookData.books[i]);
+    } catch(err) {
+      console.log('Error encountered while generating book cards: ', err);
+    }
   }
   
 })();
-
-
-
-// add click handler to overlay so that the menu hides on clickaway 

@@ -11,6 +11,10 @@
     title = titleInput.value;
     author = authorInput.value;
 
+    // Note: at this point the inputs should be sanitized before using them in
+    // constructing new DOM elements. For the purposes of this test, we're setting
+    // that aside.
+
     // reset the form 
     titleInput.value = '';
     authorInput.value = '';
