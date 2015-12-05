@@ -1,4 +1,5 @@
 // add alt text
+// add error handling
 (function() {
   // functions to generate book-cards, handle the menu button, and add cards to the
   // dom from preexisting data
@@ -76,6 +77,9 @@
 
     card.appendChild(cardContent);
     card.appendChild(cardButtons);
+
+    // add data-author attribute for reordering
+    card.setAttribute('data-author', book.author);
 
     var container = document.getElementById('card-container');
     container.appendChild(card);
