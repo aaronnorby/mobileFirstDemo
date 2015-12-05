@@ -4,6 +4,10 @@ body {
   font-family: Roboto, Arial, sans-serif;
 }
 
+p {
+  font-size: .75rem;
+}
+
 .top-bar-container {
   height: 40px;
   width: 100%;
@@ -25,6 +29,7 @@ body {
   position: absolute;
   padding-left: 5%;
   top: 30%;
+  font-weight: 400;
 }
 
 .menu-btn {
@@ -99,6 +104,14 @@ body {
   height: 125px;
 }
 
+.welcome-card h3 {
+  color: #e4004f;
+}
+
+.welcome-header {
+  margin-bottom: 5%;
+}
+
 /* container for add-book form */
 .input-container {
   display: none;
@@ -116,6 +129,8 @@ body {
 }
 
 .card-content {
+  padding-left: 3%;
+  padding-top: 5%;
 }
 
 .card-btn {
